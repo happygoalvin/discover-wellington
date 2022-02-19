@@ -1,0 +1,16 @@
+#general
+.DS_store
+.AppleDouble
+.LSOverride
+.vscode
+
+#Thumbnails
+._*
+Thumbs.db
+
+#Files that might appear in the root of a volume
+.Spotlight-V100
+.Trashes
+
+#Application Specific Files
+node_modules
