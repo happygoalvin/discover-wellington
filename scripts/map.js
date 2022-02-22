@@ -7,7 +7,6 @@ let map = L.map('map').setView(wellington, 12);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 20,
-    // minZoom: 11,
     id: 'happygoalvin/ckzu19x7w000915paw31igmdd',
     tileSize: 512,
     zoomOffset: -1,
@@ -206,7 +205,7 @@ let overlays = [
         collapsed: true,
         layers: [
             {
-                name: "Maori Sites of importance",             
+                name: "Maori Sites of importance",          
                 layer: maoriSitesLayerGroup,
             },
             {
