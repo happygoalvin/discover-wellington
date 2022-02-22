@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "leaflet-panel-layers": "^1.2.7"
+  }
+}
