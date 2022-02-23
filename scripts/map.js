@@ -3,15 +3,29 @@ let wellington = [-41.28664, 174.77557];
 let map = L.map('map').setView(wellington, 12);
 
 
+
+
 // generate map layer start
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+let mapBasicLayerGroup = L.layerGroup();
+let mapBasic = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 20,
+    id: 'happygoalvin/ckzz4pvdb002v14qry8vigywm',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoiaGFwcHlnb2FsdmluIiwiYSI6ImNrenJ5djFxZTFlZ3AycnM4eTc2ODJzYWQifQ.5COZ2EO8iEf_uNokeHaNrQ'
+})
+mapBasic.addTo(mapBasicLayerGroup)
+
+let mapMinimoLayerGroup = L.layerGroup();
+let mapMinimo = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 20,
     id: 'happygoalvin/ckzu19x7w000915paw31igmdd',
     tileSize: 512,
     zoomOffset: -1,
     accessToken: 'pk.eyJ1IjoiaGFwcHlnb2FsdmluIiwiYSI6ImNrenJ5djFxZTFlZ3AycnM4eTc2ODJzYWQifQ.5COZ2EO8iEf_uNokeHaNrQ'
-}).addTo(map);
+}).addTo(mapMinimoLayerGroup);
 // generate map layer end
 
 // generate custom marker icons start
@@ -43,19 +57,6 @@ let maoriIcon = L.icon({
     popupAnchor: [0, -30],
 })
 
-let trackIcon = L.icon({
-    iconUrl: '/images/map-icons/track-legend.png',
-    iconSize: [27, 27],
-    iconAnchor: [13, 27],
-    popupAnchor: [1, -24],
-})
-
-let maoriTrackIcon = L.icon({
-    iconUrl: '/images/map-icons/maori-track.png',
-    iconSize: [27, 27],
-    iconAnchor: [13, 27],
-    popupAnchor: [1, -24],
-})
 // generate custom marker icons end
 
 
@@ -185,45 +186,66 @@ let maoriSitesLayerGroup = L.layerGroup();
 let maoriTracksLayerGroup = L.layerGroup();
 
 let baseLayers = [{
-    group: "Park Layers",
-    collapsed: true,
-    layers: [
-        {
-            name: "Park Location",
-            layer: parkMarkerLayerGroup,
+    group: "Map Style",
+    collapsed:true,
+    layers: [{
+        active: true,
+        name: "Street",
+        layer: mapBasicLayerGroup,
         },
         {
-            name: "Park Area",
-            layer: parkAreaLayerGroup,
+            name: "Minimalistic",
+            layer: mapMinimoLayerGroup,
         }
     ]
 }]
 
 let overlays = [
     {
+        group: "Park Layers",
+        collapsed: true,
+        layers: [
+            {
+                name: "Park Location",
+                icon: '<i class ="icon icon-park-marker"></i>',
+                layer: parkMarkerLayerGroup,
+            },
+            {
+                name: "Park Area",
+                icon: '<i class="icon icon-park-area"></i>',
+                layer: parkAreaLayerGroup,
+            }
+        ]
+    },
+    {
         group: "Maori Sites",
         collapsed: true,
         layers: [
             {
-                name: "Maori Sites of importance",          
+                name: "Maori Sites-of-Importance",  
+                icon : '<i class ="icon icon-maori-sites"></i>',        
                 layer: maoriSitesLayerGroup,
             },
             {
-                name: "Tracks used by Maori",
+                name: "Maori Tracks",
+                icon: '<i class ="icon icon-maori-track"></i>',
                 layer: maoriTracksLayerGroup,
             }
         ]
     },
     {
         name: "Tracks in Wellington",
+        icon: '<i class ="icon icon-track-legend"></i>',
         layer: trackLayerGroup,
     },
     {
         name: "Cycle Racks",
+        icon: '<i class ="icon icon-cycle-rack"></i>',
         layer: cycleRackLayerGroup,
     },
     {
         name: "Heritage Trees",
+        icon: '<i class ="icon icon-heritage-trees"></i>',
         layer: heritageTreesLayerGroup,
     }
 ]
@@ -235,16 +257,4 @@ let panelLayers = new L.Control.PanelLayers(baseLayers, overlays, {
 })
 
 map.addControl(panelLayers)
-
-
-// let baseLayers = {
-//     'Park Area':parkAreaLayerGroup,
-//     'Park Location':parkMarkerLayerGroup, 
-// }
-
-// let overlays = {
-//     'Maori Sites': maoriSitesLayerGroup,
-// }
-
-// L.control.layers(baseLayers,overlays).addTo(map);
 //layer switching controls end

@@ -1,0 +1,36 @@
+.icon {
+	display: inline-block;
+	margin: 2px;
+	height: 16px;
+	width: 16px;
+	background-color: #ccc;
+}
+
+/* ICONS */
+.icon-maori-sites {
+	background: url('../images/map-icons/maori.svg') center center no-repeat;
+}
+
+.icon-maori-track {
+	background: url('../images/map-icons/maori-track.png') center center no-repeat;
+}
+
+.icon-park-marker {
+	background: url('../images/map-icons/park.svg') center center no-repeat;
+}
+
+.icon-park-area {
+    background: url(../images/map-icons/park-area.png) center center no-repeat;
+}
+
+.icon-cycle-rack {
+	background: url('../images/map-icons/bicycle.svg') center center no-repeat;
+}
+
+.icon-heritage-trees {
+	background: url('../images/map-icons/tree.svg') center center no-repeat;
+}
+
+.icon-track-legend {
+    background: url('../images/map-icons/track-legend.png') center center no-repeat;
+}
