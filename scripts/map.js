@@ -132,7 +132,7 @@ async function loadMap() {
                 let lat = coord[1];
                 let lng = coord[0];
                 let cycleRackLayer = L.marker([lat,lng], {icon: bicycleIcon});
-                L.DomEvent.on(cycleRackLayer, 'click', function(){
+                cycleRackLayer.on('click', function(){
                     map.flyTo(cycleRackLayer.getLatLng(), 23)
                 })
                 cycleRackLayer.bindPopup(i.properties.Asset_Search_Description)
@@ -145,9 +145,12 @@ async function loadMap() {
         let response = await axios.get('data/heritage-trees.geojson')
         let data = response.data.features;
         for (let i of data){
-            let lng = i.geometry.coordinates[0]
             let lat = i.geometry.coordinates[1]
+            let lng = i.geometry.coordinates[0]
             let heritageTreesLayer = L.marker([lat,lng], {icon: treeIcon});
+            heritageTreesLayer.on('click', function(){
+                map.flyTo(heritageTreesLayer.getLatLng(), 23)
+            })
             heritageTreesLayer.bindPopup(i.properties.COMM_NAME);
             heritageTreesLayer.addTo(heritageTreesLayerGroup)
         }
@@ -180,6 +183,7 @@ async function loadMap() {
         })
         return maoriTrackLayer;
     }    
+    
     load();
 }
 loadMap();
