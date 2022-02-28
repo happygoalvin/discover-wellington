@@ -96,9 +96,12 @@ async function loadMap() {
             onEachFeature: function (feature, layer) {
                 let lat = layer.getBounds().getCenter()['lat'];
                 let lng = layer.getBounds().getCenter()['lng'];
-                let newMarker = L.marker([lat, lng], { icon: parkIcon });
-                newMarker.bindPopup(feature.properties.name_);
-                newMarker.addTo(parkMarkerLayerGroup)
+                let parkMarker = L.marker([lat, lng], { icon: parkIcon });
+                parkMarker.on('click', function(){
+                    map.flyTo(parkMarker.getLatLng(), 20)
+                })
+                parkMarker.bindPopup(feature.properties.name_);
+                parkMarker.addTo(parkMarkerLayerGroup)
             }
         })
         return parkMarkerLayer;
