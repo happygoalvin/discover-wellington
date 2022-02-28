@@ -167,7 +167,11 @@ async function loadMap() {
                 layer.bindPopup(feature.properties.Name)
             },
             pointToLayer: function (feature, latlng) {
-                return L.marker(latlng, { icon: maoriIcon })
+                let maoriSitesMarker = L.marker(latlng, { icon: maoriIcon })
+                maoriSitesMarker.on('click', function(){
+                    map.flyTo(maoriSitesMarker.getLatLng(), 20)
+                })
+                return maoriSitesMarker
             }
         }).addTo(maoriSitesLayerGroup)
         return maoriSitesLayer;
