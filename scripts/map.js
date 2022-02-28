@@ -1,7 +1,7 @@
 // generate map with centre point and zoom amount
 let wellington = [-41.28664, 174.77557];
 let map = L.map('map').setView(wellington, 12);
-
+map.zoomControl.setPosition('bottomleft');
 // generate map layer start
 
 let mapBasicLayerGroup = L.layerGroup();
@@ -152,7 +152,7 @@ async function loadMap() {
             let lng = i.geometry.coordinates[0]
             let heritageTreesLayer = L.marker([lat,lng], {icon: treeIcon});
             heritageTreesLayer.on('click', function(){
-                map.flyTo(heritageTreesLayer.getLatLng(), 23)
+                map.flyTo(heritageTreesLayer.getLatLng(), 20)
             })
             heritageTreesLayer.bindPopup(i.properties.COMM_NAME);
             heritageTreesLayer.addTo(heritageTreesLayerGroup)

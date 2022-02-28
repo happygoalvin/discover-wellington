@@ -15,8 +15,16 @@
 #search-container {
     position: absolute;
     z-index: 400;
-    min-width: 5vw;
+    min-width: 3vw;
     min-height: 1vh;
     top: 80px;
     left: 10px;
+}
+
+#search-btn {
+    position: absolute;
+    z-index: 400;
+    top: 2px;
+    left: 190px;
+    opacity: 100%;
 }
