@@ -81,15 +81,37 @@ async function loadMapData() {
 
             let searchResultLayer = L.layerGroup(); 
             document.getElementById('search-btn').addEventListener('click', async() => {
+                searchResultLayer.clearLayers();
                 let query = document.querySelector('#search-input').value;
                 let center = map.getBounds().getCenter();
-                let results = await search(center.lat, center.lng, query);
-                let searchMarkers = [];
+                let data = await search(center.lat, center.lng, query);
 
-                
+                let searchResults = document.querySelector('#search-results')
+
+                for (let eachLocation of data.results) {
+                    let coordinates = [eachLocation.geocodes.main.latitude, eachLocation.geocodes.main.longitude];
+                    let marker = L.marker(coordinates, {icon : mapMarkerIcon});
+                    marker.bindPopup(`<div>${eachLocation.name}</div>`)
+                    marker.addTo(searchResultLayer);
+
+                    let resultElement = document.createElement('div');
+                    resultElement.className = "search-result";
+                    resultElement.innerHTML = eachLocation.name;
+
+                    resultElement.addEventListener('click', function (){
+                        map.flyTo(coordinates, 20);
+                        marker.openPopup();
+                    })
+
+                    searchResults.appendChild(resultElement);
+                }
+
+                if (!map.hasLayer(searchResultLayer)) {
+                    map.addLayer(searchResultLayer);
+                }
             })
         })
-    } 
+    };
 
     async function loadParks() {
         let response = await axios.get('data/parks-and-reserves.geojson');

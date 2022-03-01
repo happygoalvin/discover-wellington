@@ -2,7 +2,7 @@ const API_BASE_URL="https://api.foursquare.com/v3";
 const API_KEY="fsq3/nHX2UILdHAjTckzdb6PtyE8f8aNLMyI6Q5VOHJ8Grw="
 const headers = {
     Accept: 'application/json',
-    Authorization: API_KEY    
+    Authorization: API_KEY
 }
 
 async function search(lat, lng, query) {
