@@ -56,6 +56,12 @@ let maoriIcon = L.icon({
     popupAnchor: [0, -30],
 })
 
+let mapMarkerIcon = L.icon({
+    iconUrl: '/images/map-icons/map-marker.svg',
+    iconSize: [32, 37],
+    iconAnchor: [16, 37],
+    popupAnchor: [0, -30],
+})
 // generate custom marker icons end
 
 
@@ -72,6 +78,16 @@ async function loadMapData() {
             loadHeritageTrees();
             loadMaoriSites();
             loadMaoriTracks();
+
+            let searchResultLayer = L.layerGroup(); 
+            document.getElementById('search-btn').addEventListener('click', async() => {
+                let query = document.querySelector('#search-input').value;
+                let center = map.getBounds().getCenter();
+                let results = await search(center.lat, center.lng, query);
+                let searchMarkers = [];
+
+                
+            })
         })
     } 
 
