@@ -14,14 +14,17 @@
 
 #search-container {
     position: absolute;
-    z-index: 400;
-    top: 10px;
-    left: 10px;
-    background-color: 255,255,255;
+    z-index: 314159;
+    width: 300px;
+    min-height: 50px;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(255,255,255,0.5);
+    padding-top: 25px;
+    padding-left: 25px;
 }
 
 #search-btn {
-    position: absolute;
-    top: 2px;
-    left: 192px;
+    margin-left: 5px;
+    margin-bottom: 2px;
 }

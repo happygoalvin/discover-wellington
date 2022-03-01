@@ -61,7 +61,7 @@ let maoriIcon = L.icon({
 
 // load in geoJSON files start
 
-async function loadMap() {
+async function loadMapData() {
 
     function load() {
         window.addEventListener('DOMContentLoaded', async function () {
@@ -193,7 +193,7 @@ async function loadMap() {
     
     load();
 }
-loadMap();
+loadMapData();
 
 // load in geoJSON files end
 
