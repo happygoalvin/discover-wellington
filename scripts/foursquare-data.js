@@ -17,7 +17,7 @@ async function search(lat, lng, query) {
             'v': '20220211',  // YYYYMMDD format
             'query': query,
             'radius': 40000,
-            'limit': 50
+            'limit': 25,
         }
     })
     return response.data;

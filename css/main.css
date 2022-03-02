@@ -64,7 +64,12 @@
 }
 
 #search-results {
-    margin-left: 5px;
     cursor:pointer;
+}
+
+.search-result {
+    border-bottom: 1px solid #3d3d3d;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
