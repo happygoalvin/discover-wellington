@@ -33,15 +33,16 @@
     <section id="map-container">
         <div id="map">
             <div id="sidebar">
-                <div class="toggle-btn" onclick="showSearchMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                    
                 <input type="text" id="search-input"/>
                 <button id="search-btn" class="btn btn-primary btn-sm">Search</button>
+                <div id="result-container">
                 <div id="search-results"></div>
+                </div>
+            </div>
+            <div class="toggle-btn" onclick="showSearchMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </section>

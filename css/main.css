@@ -14,43 +14,57 @@
 
 #sidebar {
     position: absolute;
+    display: flow-root;
     z-index: 314158;
     width: 300px;
     height: 100%;
     background: rgba(255,255,255,0.5);
     left: -300px;
     transition: .4s;
+    cursor: default;
+    overflow-y: auto;
 }
 
 #sidebar.active {
     left:0;
 }
 
-#sidebar .toggle-btn {
+.toggle-btn {
     position: absolute;
     z-index: 314158;
     top: 10px;
-    left: 320px;
+    left: 20px;
     cursor: pointer;
+    transition: 0.4s;
+    border: 1px solid black;
+}
+
+.toggle-btn.active {
+    left: 320px;
 }
 
 .toggle-btn span {
     z-index: 314158;
     width: 40px;
     height: 5px;
-    background: #000;
+    background-color: #333;
     display: block;
-    margin-top: 5px;
+    margin: 5px;
 }
 
-#search-container {
-    position: absolute;
-    width: 300px;
-    padding-top: 25px;
-    padding-left: 25px;
+#search-input {
+    margin: 10px;
+    padding: 5px;
+    padding-right: 30px;
 }
 
 #search-btn {
-    margin-left: 5px;
     margin-bottom: 2px;
+    padding: 5px;
 }
+
+#search-results {
+    margin-left: 5px;
+    cursor:pointer;
+}
+
