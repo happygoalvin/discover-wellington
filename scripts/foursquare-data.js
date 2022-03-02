@@ -17,7 +17,19 @@ async function search(lat, lng, query) {
             'v': '20220211',  // YYYYMMDD format
             'query': query,
             'radius': 40000,
-            'limit': 25,
+            'limit': 20,
+        }
+    })
+    return response.data;
+}
+
+async function searchPicture(imageResponse) {
+    let response = await axios.get(API_BASE_URL + "/places/" + imageResponse + "/photos", {
+        headers: {
+            ...headers
+        },
+        params: {
+            classifications: 'indoor'
         }
     })
     return response.data;

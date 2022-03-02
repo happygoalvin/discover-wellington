@@ -95,6 +95,16 @@ async function loadMapData() {
                     marker.bindPopup(`<div>${eachLocation.name}</div>`)
                     marker.addTo(searchResultLayer);
 
+                    let imageResponse = await searchPicture(eachLocation.fsq_id) // returns array of objects
+                    let imageElement = document.createElement('div')
+                    for (let images of imageResponse) {
+                        let displayImage = images.prefix + "200" + images.suffix;
+                        imageElement.className = "image-result";
+                        imageElement.innerHTML = `<img src="${displayImage}">`
+                        searchResults.appendChild(imageElement)
+                    }
+                    
+
                     let resultElement = document.createElement('div');
                     resultElement.className = "search-result";
                     resultElement.innerHTML = `<p>${eachLocation.name}</p>

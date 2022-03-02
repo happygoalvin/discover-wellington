@@ -14,7 +14,6 @@
 
 #sidebar {
     position: absolute;
-    display: flow-root;
     z-index: 314158;
     width: 300px;
     height: 100%;
