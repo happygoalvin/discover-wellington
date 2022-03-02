@@ -79,7 +79,8 @@ async function loadMapData() {
             loadMaoriSites();
             loadMaoriTracks();
 
-            let searchResultLayer = L.layerGroup(); 
+            let searchResultLayer = L.layerGroup();
+            searchResultLayer.addTo(map) 
             document.getElementById('search-btn').addEventListener('click', async() => {
                 searchResultLayer.clearLayers();
                 let query = document.querySelector('#search-input').value;
@@ -96,7 +97,8 @@ async function loadMapData() {
 
                     let resultElement = document.createElement('div');
                     resultElement.className = "search-result";
-                    resultElement.innerHTML = eachLocation.name;
+                    resultElement.innerHTML = `<p>${eachLocation.name}</p>
+                                               <span>${eachLocation.location.formatted_address}</span>`
 
                     resultElement.addEventListener('click', function (){
                         map.flyTo(coordinates, 20);
