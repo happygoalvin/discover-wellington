@@ -101,6 +101,10 @@ async function loadMapData() {
                         let displayImage = images.prefix + "200" + images.suffix;
                         imageElement.className = "image-result";
                         imageElement.innerHTML = `<img src="${displayImage}">`
+                        imageElement.addEventListener('click', ()=>{
+                            map.flyTo(coordinates, 20);
+                            marker.openPopup();
+                        })
                         searchResults.appendChild(imageElement)
                     }
                     
@@ -108,7 +112,7 @@ async function loadMapData() {
                     let resultElement = document.createElement('div');
                     resultElement.className = "search-result";
                     resultElement.innerHTML = `<p>${eachLocation.name}</p>
-                                               <span>${eachLocation.location.formatted_address}</span>`
+                                               <p>${eachLocation.location.formatted_address}</p>`
 
                     resultElement.addEventListener('click', function (){
                         map.flyTo(coordinates, 20);
