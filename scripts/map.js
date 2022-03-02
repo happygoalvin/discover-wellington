@@ -318,3 +318,4 @@ let panelLayers = new L.Control.PanelLayers(baseLayers, overlays, {
 map.addControl(panelLayers)
 
 //layer switching controls end
+

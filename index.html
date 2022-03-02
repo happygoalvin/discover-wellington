@@ -32,18 +32,18 @@
     <!-- section for map -->
     <section id="map-container">
         <div id="map">
-            
-        </div>
-            <nav class="navbar navbar-light bg-light" id="search-container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
-                    <input type="text" id="search-input"/>
-                    <button id="search-btn" class="btn btn-primary btn-sm">Search</button>
-                    <div id="search-results"></div>
+            <div id="sidebar">
+                <div class="toggle-btn" onclick="showSearchMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-              </nav>
+                    
+                <input type="text" id="search-input"/>
+                <button id="search-btn" class="btn btn-primary btn-sm">Search</button>
+                <div id="search-results"></div>
+            </div>
+        </div>
     </section>
     <!-- end of map -->
 
@@ -61,6 +61,7 @@
     integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- own scripts -->
+    <script src="scripts/animation.js"></script>
     <script src="scripts/foursquare-data.js"></script>
     <script src="scripts/map.js"></script>
 </body>
