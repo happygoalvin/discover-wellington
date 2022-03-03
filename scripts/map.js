@@ -88,6 +88,7 @@ async function loadMapData() {
                 let data = await search(center.lat, center.lng, query);
 
                 let searchResults = document.querySelector('#search-results')
+                searchResults.innerHTML = "";
 
                 for (let eachLocation of data.results) {
                     let coordinates = [eachLocation.geocodes.main.latitude, eachLocation.geocodes.main.longitude];
@@ -103,7 +104,7 @@ async function loadMapData() {
                         imageElement.innerHTML = `<img src="${displayImage}">`
                         imageElement.addEventListener('click', ()=>{
                             map.flyTo(coordinates, 20);
-                            marker.openPopup();
+                            marker.openPopup(); 
                         })
                         searchResults.appendChild(imageElement)
                     }
@@ -114,7 +115,7 @@ async function loadMapData() {
                     resultElement.innerHTML = `<p>${eachLocation.name}</p>
                                                <p>${eachLocation.location.formatted_address}</p>`
 
-                    resultElement.addEventListener('click', function (){
+                    resultElement.addEventListener('click', function (){ 
                         map.flyTo(coordinates, 20);
                         marker.openPopup();
                     })

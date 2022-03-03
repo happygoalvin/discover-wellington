@@ -7,7 +7,7 @@ function showSearchMenu() {
     }
 }
 
-let hoverEvent = document.getElementsByClassName('toggle-btn')
+let hoverEvent = document.querySelectorAll('.toggle-btn')
 for (let hover of hoverEvent) {
     hover.addEventListener('mouseenter', function(event) {
         event.target.style.backgroundColor = "#6dcc93";
