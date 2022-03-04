@@ -167,7 +167,7 @@ async function loadMapData() {
         let data = response.data
         let trackLayer = L.geoJson(data, {
             onEachFeature: function (feature, layer) {
-                layer.bindPopup(`<table class="table">
+                layer.bindPopup(`<table class="table table-bordered">
                                    <thead>
                                         <tr>
                                            <th scope="col">Track Name</th>
@@ -177,7 +177,7 @@ async function loadMapData() {
                                     <tbody>
                                         <tr scope="row">
                                             <td>${feature.properties.track_Name}</td>
-                                            <td>${feature.properties.track_Name}</td>
+                                            <td>${feature.properties.type}</td>
                                         </tr>
                                     </tbody>
                                  </table>`)
