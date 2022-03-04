@@ -55,6 +55,7 @@
 }
 
 #search-input {
+    font-family: 'Noto Sans', sans-serif;
     margin: 10px;
     margin-left: 20px;
     padding: 5px;
@@ -85,16 +86,20 @@
 }
 
 .search-result {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
     border-bottom: 1px solid #666666;
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .search-result p {
-    margin-left: 20px
+    margin-left: 20px;
+    margin-bottom: 6px;
 }
 
 .image-result {
     margin: 10px;
     margin-left: 30px;
 }
+
