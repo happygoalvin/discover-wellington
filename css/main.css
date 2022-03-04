@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+@font-face {
+    font-family: sans-serif;
+    src: url(../fonts/NotoSans-Regular.ttf);
+    src: url(../fonts/NotoSans-Bold.ttf);
+}
+
 *{
     -webkit-box-sizing: unset;
     -moz-box-sizing: unset;
