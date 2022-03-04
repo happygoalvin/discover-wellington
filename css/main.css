@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
-@font-face {
-    font-family: sans-serif;
-    src: url(../fonts/NotoSans-Regular.ttf);
-    src: url(../fonts/NotoSans-Bold.ttf);
-}
-
 *{
+    padding: none;
+    margin: none;
     -webkit-box-sizing: unset;
     -moz-box-sizing: unset;
-    box-sizing: unset;
+    box-sizing: border-box;
 }
 
 #map-container {
@@ -109,3 +105,18 @@
     margin-left: 30px;
 }
 
+.leaflet-panel-layers-group.collapsible:not(.expanded) {
+    height: 20px;
+    box-sizing: unset;
+    padding-inline: inherit;
+}
+
+.leaflet-panel-layers-overlays .leaflet-panel-layers-item {
+    margin-bottom: 4px;
+    padding: 2px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-sizing: unset;
+    padding-inline: inherit;
+}
