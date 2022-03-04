@@ -22,7 +22,17 @@ a {
     color: #ffffff;
 }
 
+.CTA-btn {
+    border: 1px solid #ffffff;
+    border-radius: 0.75rem;
+    padding: 1vh 3vh;
+    transition: all 0.3s ease-in-out;
+}
 
+.CTA-btn:hover {
+    color: #030303;
+    background: #ffffff;
+}
 
 #map-container {
     position: relative;
