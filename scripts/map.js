@@ -167,12 +167,20 @@ async function loadMapData() {
         let data = response.data
         let trackLayer = L.geoJson(data, {
             onEachFeature: function (feature, layer) {
-                layer.bindPopup(`<div>
-                <ul>
-                <li>Track Name: ${feature.properties.track_Name}</li>
-                <li>Track Type: ${feature.properties.type}</li>
-                </ul>
-                </div>`)
+                layer.bindPopup(`<table class="table">
+                                   <thead>
+                                        <tr>
+                                           <th scope="col">Track Name</th>
+                                           <th scope="col">Track Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr scope="row">
+                                            <td>${feature.properties.track_Name}</td>
+                                            <td>${feature.properties.track_Name}</td>
+                                        </tr>
+                                    </tbody>
+                                 </table>`)
             }
         }).addTo(trackLayerGroup)
         trackLayer.setStyle({
