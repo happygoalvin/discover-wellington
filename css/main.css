@@ -19,19 +19,19 @@ html, body {
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: #030303;
 }
 
 .CTA-btn {
-    border: 1px solid #ffffff;
+    border: 1px solid #030303;
     border-radius: 0.75rem;
     padding: 1vh 3vh;
     transition: all 0.3s ease-in-out;
 }
 
 .CTA-btn:hover {
-    color: #030303;
-    background: #ffffff;
+    color: #ffffff;
+    background: #030303;
 }
 
 .wrapper {
@@ -56,7 +56,7 @@ a {
 .bg {
     background: url('../images/wrapper/bg.png') no-repeat center;
     background-size: cover;
-    transform: translateZ(-800px) scale(4);
+    transform: translateZ(-650px) scale(3.5);
     z-index: 1;
 }
 
@@ -87,12 +87,54 @@ a {
     z-index: 5;
 }
 
+.hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: absolute;
+    left: 2.5rem;
+    top: 2.5rem;
+    color: #030303;
+}
+
 .hero-text h3 {
     font-size: 10rem;
     letter-spacing: 1rem;
     position: absolute;
     left: 30rem;
     bottom: 30rem;
+}
+
+.hero-text ul {
+    font-size: 0.75rem;
+    position: absolute;
+    right: 2.5rem;
+    top: 2.5rem;
+}
+
+.hero-text ul li {
+    margin-left: 2.5rem;
+    list-style-type: none;
+    display: inline-block;
+    /* visibility: hidden; */
+}
+
+.social-container {
+    position: absolute;
+    right: 4rem;
+    bottom: 2.5rem;
+}
+
+.social-container i {
+    font-size: 1.25rem;
+    margin-right: 1rem;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    background: #030303;
+    min-height: 100vh;
+    z-index: 6
 }
 
 #map-container {
