@@ -61,24 +61,38 @@ a {
 }
 
 .midground {
-    background: url('../images/wrapper/midground.png') no-repeat center bottom 20rem;
+    background: url('../images/wrapper/midground.png') no-repeat center bottom 21rem;
     background-size: cover;
     transform: translateZ(-420px) scale(2.5);
     z-index: 2;
 }
 
 .foreground {
-    background: url('../images/wrapper/foreground.png') no-repeat center bottom 06rem;
+    background: url('../images/wrapper/foreground.png') no-repeat center bottom 0rem;
     background-size: cover;
-    transform: translateZ(-200px) scale(1.85);
+    transform: translateZ(-240px) scale(1.85);
     z-index: 1;
 }
 
 .person {
-    background: url('../images/wrapper/person.png') no-repeat center bottom 10rem;
+    background: url('../images/wrapper/person.png') no-repeat center bottom 06rem;
     background-size: cover;
-    transform: translateZ(-25px) scale(1.75);
+    transform: translateZ(-100px) scale(1.75);
     z-index: 4;
+}
+
+.hero-text {
+    background-size: cover;
+    transform: translateZ(0), scale(1);
+    z-index: 5;
+}
+
+.hero-text h3 {
+    font-size: 10rem;
+    letter-spacing: 1rem;
+    position: absolute;
+    left: 30rem;
+    bottom: 30rem;
 }
 
 #map-container {
