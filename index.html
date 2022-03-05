@@ -31,7 +31,8 @@
     <div class="wrapper">
         <div class="parallax-group hero-container">
             <div class="parallax-layer bg"></div>
-            <div class="parallax-layer landscape"></div>
+            <div class="parallax-layer midground"></div>
+            <div class="parallax-layer foreground"></div>
             <div class="parallax-layer person"></div>
             <div class="parallax-layer text">
                 <h2>Wellington Tours</h2>
@@ -59,25 +60,22 @@
         <!-- end of parallax hero banner -->
 
     </div>
-
-    <!-- section for map -->
-    <section id="map-container">
-        <div id="map">
-            <div id="sidebar">
-                <input type="text" id="search-input" placeholder="Look for nearby amenities..."/>
-                <button id="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <div id="search-results"></div>
+        <!-- section for map -->
+        <section id="map-container">
+            <div id="map">
+                <div id="sidebar">
+                    <input type="text" id="search-input" placeholder="Look for nearby amenities..."/>
+                    <button id="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <div id="search-results"></div>
+                </div>
+                <div class="toggle-btn" onclick="showSearchMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div class="toggle-btn" onclick="showSearchMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </section>
-    <!-- end of map -->
-
-
+        </section>
+        <!-- end of map -->
     <!-- scripting environment -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" 
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" 
