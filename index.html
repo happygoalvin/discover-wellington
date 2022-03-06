@@ -95,15 +95,17 @@
             <section class="contact-container">
                 <h1>Contact Us</h1>
                 <p>Have questions regarding our tours? Let's get in touch.</p>
+                <div style="display:none" id="error"></div>
                 <div class="contact-form">
                     <label>Full Name</label>
-                    <input type="text" name="full-name" placeholder="Please key in your full name">
+                    <input type="text" name="full-name" id="name" placeholder="Please key in your full name">
                     <label>Email Address</label>
-                    <input type="text" name="email" placeholder="Please key in your email-address">
+                    <input type="text" name="email" id="email"  placeholder="Please key in your email-address">
                     <label for="">Contact Number</label>
-                    <input type="text" name="contact-number" placeholder="Please key in your contact number">
+                    <input type="text" name="contact-number" id="contact-number" placeholder="Please key in your contact number">
                 </div>
                 <h4>How did you hear about us?</h4>
+                <div id="radio-error" style="display: none;"></div>
                 <div class="survey">
                     <label>Word of mouth</label>
                     <input type="radio" name="survey" id="word-of-mouth" value="word-of-mouth">
@@ -139,6 +141,7 @@
         integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- own scripts -->
+    <script src="scripts/validation.js"></script>
     <script src="scripts/animation.js"></script>
     <script src="scripts/foursquare-data.js"></script>
     <script src="scripts/map.js"></script>

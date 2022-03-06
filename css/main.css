@@ -247,6 +247,20 @@ a:hover {
     transition: .2s ease-in-out;
 }
 
+#error {
+    background-color: tomato;
+    color: maroon;
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+#radio-error {
+    background-color: tomato;
+    color: maroon;
+    font-size: 12px;
+    padding-top: 2px;
+}
+
 .footer ul{
     display: flex;
     flex-direction: row;
