@@ -33,14 +33,13 @@
     <div class="wrapper">
         <div class="parallax-group hero-container">
             <div class="parallax-layer bg"></div>
-            <div class="parallax-layer midground"></div>
-            <div class="parallax-layer foreground"></div>
+            <div class="parallax-layer landscape"></div>
             <div class="parallax-layer person"></div>
             <div class="parallax-layer hero-text">
                 <h2>Wellington Tours Inc.</h2>
                 <ul>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Map</a></li>
+                    <li><a href="#">Places of Interest</a></li>
                     <li><a href="#" class="CTA-btn" type="button">Join Our Tour</a></li>
                 </ul>
                 <div>
@@ -62,31 +61,44 @@
                     <h3>Take a Hike</h3>
                     <span>Discover the different nature trails and urban-nature trails that Wellington has to
                         offer.</span>
+                    <article class="culture-content">
+                        <img id="kupe-statue" src="../images/content/kupe-statue-wellington.jpg" alt="">
+                        <h3>Appreciate the Culture</h3>
+                        <span>New Zealand is chock full of culture, come and discover the maori way-of-life and visit
+                            maori cultural sites with us</span>
+                    </article>
                 </article>
-                <article class="culture-content">
-                    <img id="kupe-statue" src="../images/content/kupe-statue-wellington.jpg" alt="">
-                    <h3>Appreciate the Culture</h3>
-                    <span>New Zealand is chock full of culture, come and discover the maori ways of life and visit
-                        maori cultural sites with us</span>
-                </article>
+        <!-- End of Article -->
+
+                <!-- section for map -->
+                <section id="map-container">
+                    <div class="map-content">
+                        <h1>Places of Interest</h1>
+                        <p>Look for nearby amenities, hiking trails, nature reserves, parks, maori cultural sites and trails using our
+                            interactive map.</p>
+                    </div>
+                    <div id="map">
+                        <div id="sidebar">
+                            <input type="text" id="search-input" placeholder="Look for nearby amenities..." />
+                            <button id="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <div id="search-results"></div>
+                        </div>
+                        <div class="toggle-btn" onclick="showSearchMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </section>
+                <!-- end of map -->
             </div>
-            <!-- section for map -->
-            <section id="map-container">
-                <h1>check out this map</h1>
-                <div id="map">
-                    <div id="sidebar">
-                        <input type="text" id="search-input" placeholder="Look for nearby amenities..." />
-                        <button id="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <div id="search-results"></div>
-                    </div>
-                    <div class="toggle-btn" onclick="showSearchMenu()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </section>
-            <!-- end of map -->
+            <footer class="footer">
+                <ul>
+                    <li>Designed by Alvin Yo</li>
+                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </footer>
         </div>
     </div>
 
