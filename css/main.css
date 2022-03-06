@@ -14,7 +14,7 @@ html, body {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
     background-color: #030303;
-    color: #ffffff;
+    color: whitesmoke;
 }
 
 a {
@@ -34,7 +34,7 @@ a:hover {
 }
 
 #CTA-btn:hover {
-    color: #ffffff;
+    color: whitesmoke;
     background: #4c8f77;
 }
 
@@ -126,7 +126,7 @@ a:hover {
 }
 
 .social-container a {
-    color: #ffffff;
+    color: whitesmoke;
 }
 
 .social-container a:hover {
@@ -201,89 +201,6 @@ a:hover {
     font-size: 16px;
     font-weight: 400;
     padding: 25px;
-}
-
-.contact-container {
-    padding: 20px 100px;
-    border-top: 1px solid whitesmoke;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    border-top: 1px solid whitesmoke;
-}
-
-.contact-form label {
-    margin-top: 10px;
-}
-
-.contact-form input {
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid white;
-}
-
-.contact-container h4 {
-    margin-top: 10px;
-    font-weight: 700;
-}
-
-.survey {
-    display: flex;
-    flex-direction: column;
-}
-
-#submit-btn {
-    margin-top: 10px;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    padding: 5px 10px;
-    transition: .2s ease-in-out;
-}
-
-#submit-btn:hover {
-    background-color: #4c8f77;
-    color: white;
-    transition: .2s ease-in-out;
-}
-
-#error {
-    background-color: tomato;
-    color: maroon;
-    font-size: 12px;
-    padding-top: 2px;
-}
-
-#radio-error {
-    background-color: tomato;
-    color: maroon;
-    font-size: 12px;
-    padding-top: 2px;
-}
-
-.footer ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    border-top: 1px solid whitesmoke;
-    padding-top: 1rem;
-}
-.footer ul li {
-    list-style-type: none;
-    padding-right: 1.5rem;
-    padding-bottom: 1rem;
-    color: white;
-    display: inline-block;
-}
-
-.footer ul li i {
-    color: white;
-}
-
-.footer ul li i:hover{
-    color:#4c8f77;
 }
 
 .map-content {
@@ -426,6 +343,92 @@ a:hover {
     color: #030303;
 }
 
+.contact-container {
+    padding: 20px 100px;
+    border-top: 1px solid whitesmoke;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border-top: 1px solid whitesmoke;
+}
+
+.contact-form label {
+    margin-top: 10px;
+}
+
+.contact-form input {
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+}
+
+.contact-container h4 {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.survey {
+    display: flex;
+    flex-direction: column;
+}
+
+#submit-btn {
+    margin-top: 10px;
+    background-color: #e1fff5;
+    color: #030303;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: .2s ease-in-out;
+}
+
+#submit-btn:hover {
+    background-color: #4c8f77;
+    color: white;
+    transition: .2s ease-in-out;
+}
+
+#error {
+    background-color: tomato;
+    color: maroon;
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+#radio-error {
+    background-color: tomato;
+    color: maroon;
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+.footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 1px solid whitesmoke;
+    padding-top: 1rem;
+}
+.footer ul li {
+    list-style-type: none;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+    color: whitesmoke;
+    display: inline-block;
+}
+
+.footer ul li i {
+    color: whitesmoke;
+}
+
+.footer ul li i:hover{
+    color:#4c8f77;
+}
+
+
 @media screen and (max-width:480px) {
     .hero-text h2 {
         font-size: 1rem;
@@ -454,5 +457,39 @@ a:hover {
         visibility: visible;
     }
 
+    .social-container {
+        right: 1rem;
+    }
+
+    .content {
+    display: initial;
+    }
     
+    .hike-content img {
+        margin-top: 20%;
+    }
+
+    .hike-content span {
+        border-bottom: 1px solid whitesmoke;
+    }
+
+    .map-content {
+        margin-bottom: 10px;
+    }
+
+    #map {
+        height: 70vh;
+    }
+
+    .contact-container {
+        padding: 20px 10px 20px 10px;
+    }
+
+    .contact-form ::placeholder {
+        font-size: 12px;
+    }
+
+    .content-container {
+        min-height: 220vh;
+    }
 }
