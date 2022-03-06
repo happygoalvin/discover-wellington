@@ -61,7 +61,7 @@ a {
 }
 
 .midground {
-    background: url('../images/wrapper/midground.png') no-repeat center bottom 21rem;
+    background: url('../images/wrapper/midground.png') no-repeat center bottom 18rem;
     background-size: cover;
     transform: translateZ(-420px) scale(2.5);
     z-index: 2;
@@ -75,7 +75,7 @@ a {
 }
 
 .person {
-    background: url('../images/wrapper/person.png') no-repeat center bottom 06rem;
+    background: url('../images/wrapper/person.png') no-repeat center bottom 04rem;
     background-size: cover;
     transform: translateZ(-100px) scale(1.75);
     z-index: 4;
@@ -97,11 +97,12 @@ a {
 }
 
 .hero-text h3 {
-    font-size: 10rem;
+    font-size: 08rem;
     letter-spacing: 1rem;
     position: absolute;
-    left: 30rem;
-    bottom: 30rem;
+    top: 25%;
+    left: 30%;
+    transform: (-25%, -30%);
 }
 
 .hero-text ul {
@@ -129,13 +130,40 @@ a {
     margin-right: 1rem;
 }
 
-.content {
+.content-container {
     position: absolute;
     width: 100%;
     background: #030303;
     min-height: 100vh;
     z-index: 6
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+}
+
+.content img {
+    height: 25vh;
+    width: 25vh;
+    object-fit: cover;
+}
+
+.hike-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 10vh;
+}
+
+
+.culture-content img{
+    object-position: 0 0%;
+}
+
 
 #map-container {
     position: relative;
