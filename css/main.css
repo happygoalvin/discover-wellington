@@ -97,6 +97,7 @@ a {
     top: 25%;
     left: 30%;
     transform: (-25%, -30%);
+    cursor:default;
 }
 
 .hero-text ul {
@@ -119,6 +120,10 @@ a {
     bottom: 2.5rem;
 }
 
+.social-container a {
+    color: #ffffff;
+}
+
 .social-container i {
     font-size: 1.25rem;
     margin-right: 1rem;
@@ -129,7 +134,7 @@ a {
     height: 40%;
     width: 100%;
     background: #030303;
-    min-height: 100vh;
+    min-height: 140vh;
     z-index: 6;
 }
 
@@ -164,7 +169,7 @@ a {
 .hike-content span {
     font-size: 16px;
     font-weight: 400;
-    margin: 20px;
+    padding: 25px;
 }
 
 .culture-content {
@@ -175,7 +180,7 @@ a {
 
 .culture-content img{
     object-position: 0 0%;
-    margin-top: 15%;
+    margin-top: 05%;
 }
 
 .culture-content h3 {
@@ -184,8 +189,41 @@ a {
 }
 
 .culture-content span {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
+    padding: 25px;
+}
+
+.contact-container {
+    margin-top: 20px;
+    padding: 0px 100px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    margin-top: 10px;
+}
+
+.contact-form input {
+    margin-top: 5px;
+}
+
+.contact-container h4 {
+    margin-top: 10px;
+}
+
+.survey {
+    display: flex;
+    flex-direction: column;
+}
+
+#submit-btn {
+    margin-top: 10px;
 }
 
 .footer ul{
