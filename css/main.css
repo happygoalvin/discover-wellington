@@ -134,7 +134,7 @@ a:hover {
 }
 
 .social-container i {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-right: 1rem;
 }
 
@@ -209,8 +209,10 @@ a:hover {
     flex-wrap: wrap;
     align-items: center;
 }
+
 .map-content h1 {
     padding-top: 20px;
+    font-weight: 700;
 }
 
 .map-content p {
@@ -422,12 +424,95 @@ a:hover {
 
 .footer ul li i {
     color: whitesmoke;
+    font-size: 1.5rem;
 }
 
 .footer ul li i:hover{
     color:#4c8f77;
 }
 
+@media screen and (max-width:1024px) {
+    .hero-text h2 {
+        font-size: 1rem;
+        font-weight: 700;
+        position: absolute;
+        left: 2rem;
+    }
+
+    .hero-text h3 {
+        font-size: 3rem;
+        top: 45%;
+        left: 30%;
+        transform: (-45%,-30%);
+    }
+
+    .hero-text ul {
+        right: 1rem;
+        top: 2rem;
+    }
+
+    .hero-text ul li {
+        margin-left: 0.8rem;
+    }
+
+    .social-container {
+        right: 1rem;
+    }
+
+    .social-container i {
+        font-size: 2rem;
+        margin-right: 1.5rem;
+    }
+
+    .content {
+    display: initial;
+    }
+
+    .content img {
+        height: 40vh;
+        width: 40vh;
+    }
+    
+    .hike-content img {
+        margin-top: 10%;
+    }
+
+    .hike-content h3 {
+        font-size: 42px;
+        margin-top: 3%;
+    }
+
+    .hike-content span {
+        border-bottom: 1px solid whitesmoke;
+        font-size: 26px;
+        padding: 25px 50px 25px 50px;
+    }
+
+    .map-content {
+        margin-bottom: 10px;
+    }
+    
+    .map-content h1 {
+        font-size: 42px;
+        font-weight: 700;
+    }
+
+    .map-content p {
+        font-size: 26px;
+    }
+
+    #map {
+        height: 70vh;
+    }
+
+    .contact-container {
+        padding: 20px 10px 20px 10px;
+    }
+
+    .content-container {
+        min-height: 220vh;
+    }
+}
 
 @media screen and (max-width:480px) {
     .hero-text h2 {
@@ -461,20 +546,39 @@ a:hover {
         right: 1rem;
     }
 
+    .social-container i {
+        font-size: 1.5rem;
+        margin-right: 0.75rem;
+    }
+
     .content {
     display: initial;
     }
     
+    .hike-content h3 {
+        font-size: 30px;
+    }
+
     .hike-content img {
         margin-top: 20%;
     }
 
     .hike-content span {
         border-bottom: 1px solid whitesmoke;
+        font-size: 18px;
+        padding-bottom: 30px;
     }
 
     .map-content {
         margin-bottom: 10px;
+    }
+
+    .map-content h1 {
+        font-size: 30px;
+    }
+
+    .map-content p {
+        font-size: 18px;
     }
 
     #map {
@@ -492,4 +596,9 @@ a:hover {
     .content-container {
         min-height: 220vh;
     }
+
+    .footer ul li i {
+        font-size: 1.5rem;
+    }
 }
+
