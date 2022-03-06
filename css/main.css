@@ -99,9 +99,10 @@ a:hover {
     letter-spacing: 1rem;
     position: absolute;
     top: 25%;
-    left: 30%;
-    transform: (-25%, -30%);
+    left: 25%;
+    transform: (-25%, -25%);
     cursor:default;
+    color: #030303;
 }
 
 .hero-text ul {
@@ -142,7 +143,7 @@ a:hover {
     height: 40%;
     width: 100%;
     background: #030303;
-    min-height: 160vh;
+    min-height: 180vh;
     z-index: 6;
 }
 
@@ -203,14 +204,15 @@ a:hover {
 }
 
 .contact-container {
-    margin-top: 20px;
-    padding: 0px 100px;
+    padding: 20px 100px;
+    border-top: 1px solid whitesmoke;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    border-top: 1px solid whitesmoke;
 }
 
 .contact-form label {
@@ -265,11 +267,13 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    border-top: 1px solid whitesmoke;
+    padding-top: 1rem;
 }
 .footer ul li {
     list-style-type: none;
-    margin-top: 2rem;
-    margin-right: 1rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
     color: white;
     display: inline-block;
 }
