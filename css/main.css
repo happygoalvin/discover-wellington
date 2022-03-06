@@ -22,6 +22,10 @@ a {
     color: #030303;
 }
 
+a:hover {
+    color: #4c8f77;
+}
+
 .CTA-btn {
     border: 1px solid #030303;
     border-radius: 0.75rem;
@@ -31,7 +35,7 @@ a {
 
 .CTA-btn:hover {
     color: #ffffff;
-    background: #030303;
+    background: #4c8f77;
 }
 
 .wrapper {
@@ -124,6 +128,10 @@ a {
     color: #ffffff;
 }
 
+.social-container a:hover {
+    color: #4c8f77;
+}
+
 .social-container i {
     font-size: 1.25rem;
     margin-right: 1rem;
@@ -134,7 +142,7 @@ a {
     height: 40%;
     width: 100%;
     background: #030303;
-    min-height: 140vh;
+    min-height: 160vh;
     z-index: 6;
 }
 
@@ -211,10 +219,13 @@ a {
 
 .contact-form input {
     margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
 }
 
 .contact-container h4 {
     margin-top: 10px;
+    font-weight: 700;
 }
 
 .survey {
@@ -224,6 +235,16 @@ a {
 
 #submit-btn {
     margin-top: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: .2s ease-in-out;
+}
+
+#submit-btn:hover {
+    background-color: #4c8f77;
+    color: white;
+    transition: .2s ease-in-out;
 }
 
 .footer ul{
@@ -241,6 +262,10 @@ a {
 
 .footer ul li i {
     color: white;
+}
+
+.footer ul li i:hover{
+    color:#4c8f77;
 }
 
 .map-content {
