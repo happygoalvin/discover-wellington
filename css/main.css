@@ -26,14 +26,14 @@ a:hover {
     color: #4c8f77;
 }
 
-.CTA-btn {
+#CTA-btn {
     border: 1px solid #030303;
     border-radius: 0.75rem;
     padding: 1vh 3vh;
     transition: all 0.3s ease-in-out;
 }
 
-.CTA-btn:hover {
+#CTA-btn:hover {
     color: #ffffff;
     background: #4c8f77;
 }
@@ -426,4 +426,33 @@ a:hover {
     color: #030303;
 }
 
+@media screen and (max-width:480px) {
+    .hero-text h2 {
+        font-size: 1rem;
+        font-weight: 700;
+        position: absolute;
+        left: 2rem;
+    }
 
+    .hero-text h3 {
+        font-size: 2rem;
+        top: 45%;
+        left: 20%;
+    }
+
+    .hero-text ul {
+        right: 1rem;
+        top: 2rem;
+    }
+
+    .hero-text ul li {
+        margin-left: 0rem;
+        visibility: hidden;
+    }
+
+    #CTA-btn {
+        visibility: visible;
+    }
+
+    
+}
