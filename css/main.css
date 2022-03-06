@@ -135,14 +135,16 @@ a {
     width: 100%;
     background: #030303;
     min-height: 100vh;
-    z-index: 6
+    z-index: 6;
+    display:grid;
+    grid-template-columns: 40% 60%;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content:flex-start;
+    justify-content:space-around;
     flex-wrap: wrap;
 }
 
@@ -153,24 +155,54 @@ a {
 }
 
 .hike-content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-left: 10vh;
+    display: grid;
+    grid-template-rows: 80% 10%;
 }
 
+.hike-content img {
+    margin-top: 10%;
+    margin-left: 25%;
+}
+
+.hike-content h3 {
+    margin-left: 29%;
+}
+.hike-content span {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px 20px;
+}
+
+.culture-content {
+    display: grid;
+    grid-template-rows: 80% 10%;
+}
 
 .culture-content img{
     object-position: 0 0%;
+    margin-left: 25%;
 }
 
+.culture-content h3 {
+    margin-left: 20%;
+}
+
+.culture-content span {
+    padding: 10px 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
 
 #map-container {
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 #map {
     height: 100vh;
+    width: 100%;
 }
 
 #sidebar {

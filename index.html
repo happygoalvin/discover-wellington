@@ -59,35 +59,37 @@
             <div class="content">
                 <article class="hike-content">
                     <img src="../images/content/city-to-sea-walkway.jpg" alt="">
-                    <h3>Go Hiking</h3>
+                    <h3>Take a Hike</h3>
                     <span>Discover the different nature trails and urban-nature trails that Wellington has to
-                        offer</span>
+                        offer.</span>
                 </article>
                 <article class="culture-content">
-                    <img id="kupe-statue"src="../images/content/kupe-statue-wellington.jpg" alt="">
-                    <h3>Appreciate Culture</h3>
-                    <span>New Zealand is chock full of culture, come on and discover the maori ways of life and visit
-                        maori cultural sites</span>
+                    <img id="kupe-statue" src="../images/content/kupe-statue-wellington.jpg" alt="">
+                    <h3>Appreciate the Culture</h3>
+                    <span>New Zealand is chock full of culture, come and discover the maori ways of life and visit
+                        maori cultural sites with us</span>
                 </article>
             </div>
+            <!-- section for map -->
+            <section id="map-container">
+                <h1>check out this map</h1>
+                <div id="map">
+                    <div id="sidebar">
+                        <input type="text" id="search-input" placeholder="Look for nearby amenities..." />
+                        <button id="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <div id="search-results"></div>
+                    </div>
+                    <div class="toggle-btn" onclick="showSearchMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </section>
+            <!-- end of map -->
         </div>
     </div>
-    <!-- section for map -->
-    <section id="map-container">
-        <div id="map">
-            <div id="sidebar">
-                <input type="text" id="search-input" placeholder="Look for nearby amenities..." />
-                <button id="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <div id="search-results"></div>
-            </div>
-            <div class="toggle-btn" onclick="showSearchMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </section>
-    <!-- end of map -->
+
     <!-- scripting environment -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
