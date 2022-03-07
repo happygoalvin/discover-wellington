@@ -54,15 +54,19 @@ document.querySelector('#submit-btn').addEventListener('click', () => {
 
         if (invalidEmail) {
             errorDiv.innerHTML += '<p>Your email should contain at least one "." and one "@"</p>'
+            errorDiv.style.backgroundColor = "tomato";
         } else {
             errorDiv.style.backgroundColor = "#4c8f77"
         }
 
         if (contactNumberNotProvided) {
             errorDiv.innerHTML += '<p>Please provide your contact number</p>'
-        } else {
-            errorDiv.style.backgroundColor = "#4c8f77"
-        }
+            errorDiv.style.backgroundColor = "tomato";
+        } 
+    }
+
+    if (!nameNotProvided && !invalidEmail && !contactNumberNotProvided && !unselectedRadio === true) {
+        alert("you have submitted")
     }
 
 })
