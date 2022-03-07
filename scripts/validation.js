@@ -22,29 +22,28 @@ document.querySelector('#submit-btn').addEventListener('click', () => {
     let radio = null
     let survey = document.querySelectorAll('.survey');
     for (let eachSurvey of survey) {
-
-        if (eachSurvey.checked == true) {
+        if (eachSurvey.checked === true) {
             radio = eachSurvey.value;
+            unselectedRadio = false;
             break;
-        } else if (!eachSurvey.checked == true) {
+        } else if (eachSurvey.checked === false) {
             unselectedRadio = true;
-            console.log(unselectedRadio)
-        }
-
-        if (unselectedRadio) {
-            let radioErrorDiv = document.querySelector('#radio-error');
-            radioErrorDiv.innerHTML = '';
-            radioErrorDiv.style.display = "block";
-            radioErrorDiv.innerHTML += '<p>Please select at least one button</p>'
         }
     }
 
-    if (nameNotProvided || invalidEmail || contactNumberNotProvided || unselectedRadio) {
+    if (unselectedRadio) {
+        let radioErrorDiv = document.querySelector('#radio-error');
+        radioErrorDiv.innerHTML = '';
+        radioErrorDiv.style.display = "block";
+        radioErrorDiv.innerHTML += '<p>Please select at least one button</p>'
+        }
+
+    if (nameNotProvided || invalidEmail || contactNumberNotProvided) {
         let errorDiv = document.querySelector('#error');
         errorDiv.innerHTML = '';
         errorDiv.style.display = "block";
 
-        if(nameNotProvided) {
+        if (nameNotProvided) {
             errorDiv.innerHTML += '<p>Please provide your name</p>'
         }
 
@@ -52,7 +51,7 @@ document.querySelector('#submit-btn').addEventListener('click', () => {
             errorDiv.innerHTML += '<p>Your email should contain at least one "." and one "@"</p>'
         }
 
-        if(contactNumberNotProvided) {
+        if (contactNumberNotProvided) {
             errorDiv.innerHTML += '<p>Please provide your contact number</p>'
         }
     }

@@ -377,7 +377,7 @@ a:hover {
     font-weight: 700;
 }
 
-.survey {
+.survey-form {
     display: flex;
     flex-direction: column;
 }
