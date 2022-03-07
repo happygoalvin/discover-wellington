@@ -13,7 +13,7 @@ html, body {
     width: 100%;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
-    background-color: #030303;
+    background-color: #4c8f77;
     color: whitesmoke;
 }
 
@@ -142,7 +142,7 @@ a:hover {
     position: absolute;
     height: 40%;
     width: 100%;
-    background: #030303;
+    background: #4c8f77;
     min-height: 180vh;
     z-index: 6;
 }
