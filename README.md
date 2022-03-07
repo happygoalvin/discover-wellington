@@ -136,6 +136,10 @@ In the map section, there are two toggle-able functions.
 
 <img src="images/color-palette-map.png" style="display:block"></br>
 
+## Image
+* Hero-image is used to create a sense of adventure and paired with a parallax effect to create a sense of depth, as if being there in person.
+* Image used is to evoke such thoughts and feelings in the user
+
 ## Typography
 * Noto Sans Serif was used for a more modern feel.
 * Font size is adjusted according to device size for readability.
