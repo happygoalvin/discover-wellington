@@ -181,3 +181,7 @@ _Kupe Statue Image_
 
 ### **Icons**
 [svgrepo](https://www.svgrepo.com/) used for my customised map markers.
+
+
+### **Data**
+[Wellington-Data](https://data-wcc.opendata.arcgis.com/) GeoJSON Data provided open source from Wellington's City Council
