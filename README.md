@@ -16,6 +16,10 @@ The organisation aims to provide a service and entice people to join their tours
 
 The aim of users will be for interested parties looking for a holiday in Wellington and do not know where to go, the app can help the prospective user to find nearby amenities and the nearest park or track closest to them to visit as a value-add.
 
+### **Live Demo**
+
+The Live Demo website can be accessed here: https://wonderful-keller-8ff467.netlify.app/
+
 ## UX/UI
 
 ### **Objective**
