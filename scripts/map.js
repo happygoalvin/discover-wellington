@@ -274,11 +274,11 @@ let baseLayers = [{
     group: "Map Style",
     collapsed: true,
     layers: [{
+        active: true,
         name: "Street",
         layer: mapBasicLayerGroup,
     },
     {
-        active: true,
         name: "Minimalistic",
         layer: mapMinimoLayerGroup,
     }
